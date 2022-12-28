@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id= "studentService" class= "day2bt.Pojo.StudentServiceImpl"/>
-    <bean id = "compa" class = "day2bt.Pojo.CompaIml">
-        <property name="studentService" ref="studentService"/>
+    <bean id= "acountRepo" class= "day2.Pojo.AcountRepoImpl"/>
+    <bean id = "acountService" class = "dependenyInjection.AccoutServiceConstructorImpl">
+       <constructor-arg name="acountRepo" ref="acountRepo"/>
     </bean>
 </beans>
